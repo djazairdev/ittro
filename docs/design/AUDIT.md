@@ -30,7 +30,7 @@ Status: **Covered** (the design already did this), **Added** (fixed by this audi
 | 8 | Separate "your picture is bad" from "I'm unsure" (most-requested improvement, AFB n=290) | R2 #4 | Added | Screen 10 Picture problem vs screen 08 Not sure |
 | 9 | Camera-aiming guidance when the target isn't in view | R2 #4, #7 | Added | Screen 04 Searching: which way to move the phone; "isn't here" after the whole shelf |
 | 10 | Read dates, prices, allergens exactly; these are high-stakes | R1 high-stakes; R2 #3 | Added | Screen 11 Details: word for word, ingredients in full |
-| 11 | No medical advice; don't market AI as a safety substitute | R1 must avoid; hackathon rules | Added | "No medical advice" rule |
+| 11 | No medical advice; don't market AI as a safety substitute | R1 must avoid | Added | "No medical advice" rule |
 | 12 | Explicit confirmation before acting; a way to start over | R2 #16 | Covered + Added | Confirm screen 03; "start over" command |
 | 13 | Ask for the missing attribute when variants exist | R1 "which of these is 500 g?"; R2 variants | Added | Confirm asks which size if several are on the shelf and none was said |
 
@@ -104,7 +104,7 @@ A walkthrough by the designer is not a test with blind shoppers. Both research r
 
 ## Outside the design (product and research questions)
 
-These came up in both results but are not design questions. They stay for after the hackathon:
+These came up in both results but are not design questions. They remain open for future research:
 
 - Darija recognition (best published Algerian WER 39–54%).
 - Counter-served épiceries in Algeria, where the shopkeeper fetches goods.

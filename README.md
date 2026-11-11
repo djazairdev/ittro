@@ -12,7 +12,6 @@
   <a href="https://github.com/AmineYagoub/ittro/actions/workflows/ci.yml"><img src="https://github.com/AmineYagoub/ittro/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://github.com/AmineYagoub/ittro/releases/latest"><img src="https://img.shields.io/github/v/release/AmineYagoub/ittro?label=release" alt="Latest release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licence"></a>
-  <a href="docs/BUILD_LOG.md"><img src="https://img.shields.io/badge/Meta%20Global%20AI%20Hackathon-Indie%20track-0866FF" alt="Meta Global AI Developer Hackathon, Indie track"></a>
 </p>
 
 <p align="center">
@@ -23,18 +22,18 @@
   <a href="https://youtu.be/sZRq0-N3w9c">Watch the full 3-minute demo on YouTube</a>
 </p>
 
-Ittro is our entry for the Meta Global AI Developer Hackathon (Indie track). A blind shopper asks what is on the shelf, names the product they want, and Ittro guides their hand to it by voice, ticks and vibration. When the hand closes on a product, Ittro reads it and says yes only when the label matches. A wrong yes is the worst outcome, so "I can't confirm yet" always beats a guess.
+A blind shopper asks what is on the shelf, names the product they want, and Ittro guides their hand to it by voice, ticks and vibration. When the hand closes on a product, Ittro reads it and says yes only when the label matches. A wrong yes is the worst outcome, so "I can't confirm yet" always beats a guess.
 
 There are no buttons to find: every word on screen is spoken, and every wait has a sound. The demo is in English; Arabic and French are one spoken command away.
 
 ## How it works
 
-The shopper is on the left; green is what was built during the hackathon; blue are the Meta models it uses. Every piece is dated in the [build log](docs/BUILD_LOG.md), which also has [the full map](docs/BUILD_LOG.md#the-whole-system).
+The shopper is on the left. Green shows Ittro's app and relay, and blue shows the Meta models they use. Every piece is dated in the [build log](docs/BUILD_LOG.md), which also has [the full map](docs/BUILD_LOG.md#the-whole-system).
 
 ```mermaid
 flowchart LR
   shopper(["<b>Shopper</b><br/>blind or low vision"])
-  subgraph built["Built during the hackathon"]
+  subgraph built["Ittro app and relay"]
     app["<b>Ittro app</b><br/>on&nbsp;the&nbsp;phone<br/><div style='text-align:left'>•&nbsp;voice&nbsp;conversation<br/>•&nbsp;hand&nbsp;guidance<br/>•&nbsp;outline&nbsp;tracking</div>"]
     relay["<b>Relay</b><br/>on&nbsp;Cloudflare&nbsp;Workers<br/><div style='text-align:left'>•&nbsp;access&nbsp;gate<br/>•&nbsp;find&nbsp;and&nbsp;confirm<br/>•&nbsp;mask&nbsp;tracing</div>"]
   end
@@ -85,7 +84,7 @@ The phone never holds the Meta API key: only the relay calls Meta.
 - **Node 22, `node --test` and ESLint:** the tests and the lints.
 - **GitHub Actions and release-please:** tests and a fresh Android build on every pull request, and signed APKs on [GitHub Releases](https://github.com/AmineYagoub/ittro/releases).
 
-## What was built during the hackathon
+## Development history
 
 Everything in this repository dates from 26 October 2026 onward, except the existing tools it is built on. The day-by-day summary, every change with its commit, and what was not built here are in [docs/BUILD_LOG.md](docs/BUILD_LOG.md).
 

@@ -1,8 +1,8 @@
 # Ittro design assets
 
-The logo, Android icons, colours, type and screen designs for Ittro, the Android app that guides a blind shopper's hand to the right product.
+The logo, Android icons, colours, type and screen specifications for Ittro, the Android app that guides a blind shopper's hand to the right product.
 
-All of this was made on 27 October 2026, the first day of the hackathon's building period. In `docs/BUILD_LOG.md`, log it as design work made during the event, with Claude (Anthropic) as the tool.
+These assets were made on 27 October 2026 with Claude (Anthropic) as the tool. The design work is recorded in [the build log](../BUILD_LOG.md).
 
 Read `DESIGN.md` first. Ittro is **English first, voice only and never silent**: there are no buttons, every word on screen is spoken, and every wait has a sound. DESIGN.md lists the voice commands, the silence budget, the sounds and vibrations, and each screen's spoken line.
 
@@ -26,9 +26,7 @@ Read `DESIGN.md` first. Ittro is **English first, voice only and never silent**:
 | `voice/<id>.en.wav`, `voice/<id>.fr.wav` | The English and French cues, recorded with Meta MMS-TTS (16 kHz mono) | `assets/voice/`, preloaded at start; Arabic cues are spoken live by the phone's voice (DESIGN.md, "Voice") |
 | `voice/make_voice.py` | Re-records the English and French cues with MMS | Only if a cue changes |
 | `sounds/make_sounds.py` | Makes the sounds from scratch with Python alone | Run again if a sound needs changing |
-| `screens/00-identity.png` | The identity board and voice rules | Reference only |
-| `screens/01-welcome` … `30-shoppinglist` (`.png` and `.html`) | The thirty screens, 390 × 844, rendered at 2× | Build the UI to match |
-| `screens/all-screens.png` | All thirty side by side | Reference only |
+| `DESIGN.md` | Screen specifications, voice rules, sounds and vibrations | Reference for the app's behaviour and layout |
 | `AUDIT.md` | What the two research reports and the test project asked for, and where the design covers it | Read once |
 
 The wordmark SVGs use the Readex Pro font by name. They render correctly only where the font is installed, so use the PNGs elsewhere.
@@ -72,7 +70,6 @@ Each screen is spoken in full the moment it appears.
 
 - Copy the files you need into the repository (for example `assets/`). Don't link to this folder from the app's code.
 - Don't change the logo's shape or colours. If a size is missing, render it from the SVG.
-- The bottles and labels in the screens are drawings for layout only. The real app shows the live camera.
 
 ## Licences
 

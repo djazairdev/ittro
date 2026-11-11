@@ -1,14 +1,14 @@
 # 0001: How Ittro talks about the shelf, and one voice per language
 
 - **Status:** Proposed (1 November 2026). The lead maintainer decides.
-- **Covers:** part 7 and voice A of [the shelf-awareness plan](../design/shelf-awareness-plan.md). Voice B (Azure) is not covered; it needs its own record.
+- **Covers:** shelf questions and installed-voice selection (voice A). Voice B (Azure) is not covered; it needs its own record.
 - **Scope:** voice behaviour and a data flow, so a record comes first ([workflow.md](../contributing/workflow.md#decision-records)).
 
 ## Context
 
 Until now every word Ittro says is a fixed line: the found line, the hand cues, the verdicts. That keeps the safety-critical moments predictable, but it cannot answer what a sighted shopper gets at a glance: what is on this shelf, which is cheaper, is there honey here.
 
-Replaying the founder's shelf video showed that Muse Spark can answer those questions from the same still Ittro already sends for the shelf read. Research on what makes Gemini Live feel natural (1 November) named four qualities: an answer in one call, a sound within half a second, written answers in a spoken style, and memory for follow-ups. Gemini Live itself is not an option: it would replace Meta's transcription and Muse Spark, and the hackathon judges check that Meta's models are used.
+Replaying the founder's shelf video showed that Muse Spark can answer those questions from the same still Ittro already sends for the shelf read. Research on what makes Gemini Live feel natural (1 November) named four qualities: an answer in one call, a sound within half a second, written answers in a spoken style, and memory for follow-ups. Using Gemini Live itself would replace the existing Meta transcription and Muse Spark integration.
 
 The voice is the other half. The Model API has no speech synthesis. English and French cues are MMS clips, and sentences come from the phone's engine in another voice, so the two voices alternate.
 

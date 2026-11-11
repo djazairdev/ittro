@@ -1,6 +1,6 @@
 # Ittro design spec
 
-Ittro is used by people who can't see the screen. So the design starts from what the shopper **hears**; the screen mirrors the voice for low-vision shoppers, helpers standing nearby and the judges watching the demo.
+Ittro is used by people who can't see the screen. So the design starts from what the shopper **hears**. The screen mirrors the voice for low-vision shoppers, helpers standing nearby and people watching the demo.
 
 The phone is 390 × 844 points in these screens. Values are density-independent points (dp on Android, plain numbers in React Native). `AUDIT.md` lists the research findings and test lessons behind each rule.
 
@@ -186,11 +186,11 @@ What the app does today (1 Nov):
 | Arabic | The phone's own text-to-speech, spoken live from the cue text in `app/src/voiceClips.ts` | The phone's own text-to-speech (`ar-SA`) |
 
 - With TalkBack on, every cue and sentence goes through TalkBack instead.
-- So in English and French a cue and the sentence around it are two different voices. The shelf plan (`docs/design/shelf-awareness-plan.md`, step C) compares the MMS clips with the best installed phone voice and keeps one voice per language.
+- So in English and French a cue and the sentence around it are two different voices. The [voice decision record](../decisions/0001-how-ittro-talks.md) covers comparing the MMS clips with the best installed phone voice to choose one voice per language.
 - "Speak faster" and "speak slower" change the phone voice's rate for sentences and the playback speed of clips.
 - MMS on the phone was the plan: ONNX Runtime with `Xenova/mms-tts-eng` and `Xenova/mms-tts-fra`, splitting sentences at punctuation with a fixed seed. The runner was tried on 28 Oct and never finished (native library crashes, see `docs/BUILD_LOG.md`), so sentences use the phone's voice.
 - MMS is licensed CC BY-NC 4.0: free and open-source use only, with credit to Meta in the README and the app's licence notes.
-- Arabic MMS was tested and rejected on 27 Oct: the model drops the vowel marks and mispronounces. Teaching it the harakat (fine-tuning on diacritized speech) is left for after the hackathon.
+- Arabic MMS was tested and rejected on 27 Oct: the model drops the vowel marks and mispronounces. Teaching it the harakat (fine-tuning on diacritized speech) remains future work.
 
 ## Haptics
 
@@ -283,7 +283,7 @@ All values are in `tokens/tokens.json`.
 
 ## Screens
 
-PNG renders are in `screens/` at 2×, each next to an HTML file with the exact layout. The camera image is a drawing; in the app it is the live camera. Every line below is spoken, in full, when the screen appears.
+The specifications below describe each screen over the live camera. Every line below is spoken, in full, when the screen appears.
 
 ### 01 Welcome
 
