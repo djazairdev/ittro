@@ -12,7 +12,7 @@ This guide is mostly for maintainers. Contributors need only [the changelog frag
 
 ## Versions
 
-The app and the relay share one version, with [Semantic Versioning 2.0.0](https://semver.org/), and each release ships both. During the hackathon both stay `0.x`; the first public release is `1.0.0`.
+The app and the relay share one version, with [Semantic Versioning 2.0.0](https://semver.org/), and each release ships both. The first public release is `1.0.0`.
 
 - **Minor** for new shopper abilities or new relay endpoints and fields, **patch** for fixes. Within one major version the relay's API only grows, so every supported app keeps working.
 - **Where it is written:** `VERSION` in `app/app.config.ts` and `version` in `relay/package.json`.
